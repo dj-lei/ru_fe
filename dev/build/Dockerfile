@@ -30,6 +30,10 @@ RUN yarn --production --frozen-lockfile --non-interactive
 FROM node:14-alpine
 LABEL maintainer="requarks.io"
 
+ENV http_proxy "http://100.98.146.3:8080"
+ENV https_proxy "http://100.98.146.3:8080"
+ENV ftp_proxy "http://100.98.146.3:8080"
+
 RUN apk add bash curl git openssh gnupg sqlite --no-cache && \
     mkdir -p /wiki && \
     mkdir -p /logs && \
