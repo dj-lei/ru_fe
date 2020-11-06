@@ -28,5 +28,11 @@ services:
     ports:
       - "3000:3000"
 
+  ru_tools_be:
+    image: ru_tools_be:latest
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+
 volumes:
   db-data:
