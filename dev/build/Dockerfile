@@ -3,6 +3,10 @@
 # ====================
 FROM node:14-alpine AS assets
 
+ENV http_proxy "http://100.98.146.3:8080"
+ENV https_proxy "http://100.98.146.3:8080"
+ENV ftp_proxy "http://100.98.146.3:8080"
+
 RUN apk add yarn g++ make python --no-cache
 
 WORKDIR /wiki
