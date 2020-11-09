@@ -63,7 +63,7 @@ export default {
         }
       }
       // this.$refs.progress_linear.indeterminate = true
-      axios.post("http://localhost:8000/es/upload_pinmux/", formData, config).then(
+      axios.post("http://10.166.152.49:8000/es/upload_pinmux/", formData, config).then(
         (response)=>{
           this.fileName = response.data
           // this.$refs.progress_linear.indeterminate = false
@@ -74,7 +74,7 @@ export default {
       this.error_info = 'INFO:Upload Success!'
     },
     download () {
-      axios.get("http://localhost:8000/es/download_pinmux/", {
+      axios.get("http://10.166.152.49:8000/es/download_pinmux/", {
         params: {
           fileName: this.fileName,
         },
