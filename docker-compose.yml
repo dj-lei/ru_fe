@@ -27,12 +27,16 @@ services:
     restart: unless-stopped
     ports:
       - "3000:3000"
+    dns:
+      - 100.98.146.3    
 
   ru_tools_be:
     image: ru_tools_be:latest
     restart: unless-stopped
     ports:
       - "8000:8000"
+    dns:
+      - 100.98.146.3
 
 volumes:
   db-data:
